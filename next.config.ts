@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['rpkjebesuwijdkcsrvdj.supabase.co'],
   },
-   ignoreDuringBuilds: true,
 };
 
 export default nextConfig;

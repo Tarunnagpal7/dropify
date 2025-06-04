@@ -26,7 +26,7 @@ export const trackPageVisit = async (pagePath: string) => {
 export const trackDownload = async (automationId: string) => {
   try {
     // Start a Supabase transaction
-      const { data: automation, error: selectError } = await supabase
+      const { data: automation } = await supabase
       .from('automations')
       .select('downloads')
       .eq('id', automationId)

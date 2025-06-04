@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { AutomationList } from '@/components/home/AutomationList';
-
+import { Automation } from '@/lib/supabase';
 function Page() {
-  const [automations, setAutomations] = useState<any[]>([]);
+  const [automations, setAutomations] = useState<Automation[]>([]);
 
   useEffect(() => {
     async function getAutomations() {

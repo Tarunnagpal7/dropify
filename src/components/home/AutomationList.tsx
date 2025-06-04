@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Automation } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Download, Search, FileDown, Tag, Calendar, ArrowRight, Zap } from 'lucide-react';
+import { Download, Search, FileDown, ArrowRight, Zap } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { motion } from 'framer-motion';
 import { trackDownload } from '@/lib/analytics';

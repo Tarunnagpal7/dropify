@@ -35,7 +35,7 @@ const steps = [
 ];
 
 export default function LearnPage() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep,] = useState(0);
 
   return (
     <>

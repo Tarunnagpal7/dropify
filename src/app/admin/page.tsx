@@ -254,7 +254,7 @@ export default function AdminPage() {
                 <div className="flex items-center p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-md text-amber-800 dark:text-amber-300">
                   <AlertCircle className="h-5 w-5 flex-shrink-0 mr-3" />
                   <div className="text-sm">
-                    <p>This form requires Supabase configuration to work properly. Ensure you've connected Supabase and created the necessary tables and storage buckets.</p>
+                    <p>This form requires Supabase configuration to work properly. Ensure you&apos;ve connected Supabase and created the necessary tables and storage buckets.</p>
                   </div>
                 </div>
               </CardContent>
