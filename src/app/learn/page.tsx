@@ -16,7 +16,7 @@ const steps = [
   },
   {
     title: "Download the File",
-    description: "Click the download button to get the JSON file. All our automations are free and ready to use.",
+    description: "Click the download button to get the JSON or txt file. All our automations are free and ready to use.",
     icon: FileDown,
     color: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300"
   },
