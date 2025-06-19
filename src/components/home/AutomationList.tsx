@@ -17,6 +17,8 @@ type AutomationListProps = {
 export function AutomationList({ automations }: AutomationListProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [, setHoveredId] = useState<string | null>(null);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
   
   const filteredAutomations = automations.filter((automation) => 
     automation.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -135,9 +137,26 @@ export function AutomationList({ automations }: AutomationListProps) {
                         {automation.name}
                       </CardTitle>
                     </div>
-                    <CardDescription className="text-sm line-clamp-2 text-muted-foreground">
-                      {automation.description}
-                    </CardDescription>
+                    <div
+                        className={`text-sm text-muted-foreground transition-all ${
+                            expandedId === automation.id ? '' : 'line-clamp-2'
+                          } group-hover:line-clamp-none`}
+                        >
+                          {automation.description}
+                        </div>
+
+                        {/* Read more/less toggle (shown only on mobile) */}
+                        <div className="md:hidden mt-2">
+                          <button
+                            className="text-primary text-sm font-medium focus:outline-none"
+                            onClick={() =>
+                              setExpandedId((prev) => (prev === automation.id ? null : automation.id))
+                            }
+                          >
+                            {expandedId === automation.id ? 'Read less' : 'Read more'}
+                          </button>
+                        </div>
+
                   </CardHeader>
                   <CardContent className="flex-grow z-10">
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
